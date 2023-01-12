@@ -1,0 +1,12 @@
+
+Title: Nana
+Author: ['Ai Yazawa']
+Publisher: VIZ Media LLC
+
+Title: Alice's Adventures in Wonderland
+Author: ['Lewis Carroll']
+Publisher: Unknown Publisher
+
+Title: Sailor Moon 6
+Author: ['Naoko Takeuchi']
+Publisher: National Geographic Books
