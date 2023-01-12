@@ -1,6 +1,5 @@
 import requests
 
-
 # Document formatted with Black Formatter
 # Establish class for main function to access
 class Books:
@@ -32,6 +31,13 @@ class Books:
                     break
                 print(f"\nTitle: {title}\nAuthor: {author}\nPublisher: {publisher}\n")
 
+# I attempted to connect to another helper function to tidy the rest of this function's code, 
+# but the "title, author, publisher" variables caused issues with connection. 
+# and the second "else" statement was gray... ("addDecision" function can be seen at the bottom)
+                # bookManager = Books("./Data/bookData.txt")
+                # bookManager.addDecision()
+
+# option to add search result to book list
                 while True:
                     decision = input(
                         "Do you want to add this position to your shelf? [y/n]: "
@@ -47,12 +53,32 @@ class Books:
                 print("Sorry, we do not have this title in our API")
                 return
 
+# append search result to a txt file 
     def addBook(self, title, author, publisher):
         with open('./Data/bookData.txt', 'a') as f:
             f.write(f"\nTitle: {title}\nAuthor: {author}\nPublisher: {publisher}\n")
         print("Your book has been added to your Bookshelf \n")
 
+# read txt file for complete list of added books
     def showBooks(self):
         with open('./Data/bookData.txt', 'r') as f:
             data = f.read()
             print(data)
+
+
+
+    # def addDecision(self):
+    #     while True:
+    #         decision = input(
+    #             "Do you want to add this position to your shelf? [y/n]: "
+    #         )
+    #         if decision == "y":
+    #             self.addBook(title, author, publisher)
+    #             break
+    #         elif decision == "n":
+    #             break
+    #         else:
+    #             print("Unknown symbol, type y or n")
+    #     else:
+    #         print("Sorry, we do not have this title in our API")
+    #         return
